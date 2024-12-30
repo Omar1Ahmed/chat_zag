@@ -1,10 +1,14 @@
 import 'dart:ui';
 
+import 'package:flutter/material.dart';
+
 class ColorsManager {
 
-   static const Color cardBackgrounColor = Color.fromARGB(255, 18, 2, 193);
-  static const Color primaryColor = Color(0xFF1F1338);
-  static const Color secondaryColor = Color(0xFF2A2A2E);
-  static const Color buttonColor = Color(0xFF7e64ff);
+   static const Color cardBackgrounColor = Colors.white;
+  static const Color primaryColor = Colors.white;
+  static const Color secondaryColor = Color(0xFF43d664);
+  static const Color buttonColor = Color(0xFF43d664);
   static const Color textFieldColor = Color(0xFFccc2fe);
+
+
 }

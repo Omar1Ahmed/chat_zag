@@ -8,7 +8,7 @@ AppBar buildAppBar(BuildContext context) {
     leading: Container(
       margin: const EdgeInsets.all(6),
       alignment: Alignment.center,
-      decoration: const BoxDecoration(color: ColorsManager.greenColor),
+      decoration: BoxDecoration(color: ColorsManager.secondaryColor),
       child: IconButton(
         onPressed: () {
           Navigator.pop(context); 
@@ -28,7 +28,7 @@ AppBar buildAppBar(BuildContext context) {
             width: 13,
             height: 13,
             decoration: const BoxDecoration(
-              color: ColorsManager.greenColor,
+              color: ColorsManager.secondaryColor,
               shape: BoxShape.circle,
             ),
           ),
@@ -68,7 +68,7 @@ AppBar buildAppBar(BuildContext context) {
         ),
         child: const Icon(
           Icons.phone_outlined,
-          color: ColorsManager.greenColor,
+          color: ColorsManager.secondaryColor,
         ),
       ),
       const SizedBox(width: 30),

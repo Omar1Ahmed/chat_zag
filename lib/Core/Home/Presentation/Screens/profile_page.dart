@@ -72,7 +72,7 @@ class ProfileScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: index == 0
-                          ? ColorsManager.greenColor
+                          ? ColorsManager.secondaryColor
                           : Colors.grey.shade300,
                     ),
                   ),
@@ -87,7 +87,7 @@ class ProfileScreen extends StatelessWidget {
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.white,
-                      foregroundColor: ColorsManager.greenColor,
+                      foregroundColor: ColorsManager.secondaryColor,
                       side: const BorderSide(color: Colors.green),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
@@ -100,7 +100,7 @@ class ProfileScreen extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {},
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: ColorsManager.greenColor,
+                      backgroundColor: ColorsManager.secondaryColor,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),

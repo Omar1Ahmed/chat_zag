@@ -24,7 +24,7 @@ Widget buildMessageInput(BuildContext context) {
           ),
           const SizedBox(width: 10),
           CircleAvatar(
-            backgroundColor: ColorsManager.greenColor,
+            backgroundColor: ColorsManager.secondaryColor,
             child: IconButton(
               icon: const Icon(Icons.send_sharp),
               color: Colors.white,
