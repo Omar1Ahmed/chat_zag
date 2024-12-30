@@ -1,4 +1,5 @@
 import 'package:chat_zag/Core/Home/Logic/home_cubit.dart';
+import 'package:chat_zag/Core/Home/Presentation/Screens/place_holder.dart';
 import 'package:chat_zag/routing/routs.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,8 +15,10 @@ class AppRouts {
         return MaterialPageRoute(
           builder: (_) =>
               BlocProvider(create: (_) => HomeCubit(),
-                  child: const MyHomePage(title: 'Chat App',)),
+                  child: const MyHomePage()),
         );
+        case Routes.resposivePlaceHolder:
+         return MaterialPageRoute(builder: (_) => const ResponsivePlaceHolder());
 
       default:
         return null;

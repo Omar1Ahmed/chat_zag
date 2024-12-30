@@ -1,52 +1,75 @@
-
-import 'package:chat_zag/Core/Home/Logic/home_cubit.dart';
+import 'package:chat_zag/Core/Home/Presentation/widgets/new_post_dialog.dart';
+import 'package:chat_zag/Core/Home/Presentation/widgets/post_widget.dart';
+import 'package:chat_zag/Responsive/enums/device_type.dart';
+import 'package:chat_zag/Responsive/ui_component/info_widget.dart';
+import 'package:chat_zag/constants/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
-
-
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<HomeCubit,HomeState>(builder: (context, state) {
-      return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text(widget.title),
-        ),
-        body: Center(
-
-          child: Column(
-
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'You have pushed the button this many times:',
+    return InfoWidget(
+      builder: (context, info) {
+        if (DeviceType.mobile == info.deviceType ||
+            (DeviceType.tablet == info.deviceType &&
+                info.orientation == Orientation.portrait)) {
+          return Scaffold(
+            body: Center(
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16.0, vertical: 16),
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    PostWidget(
+                      username: 'Marwan',
+                      postContent: 'This is a post',
+                    ),
+                    PostWidget(
+                      username: 'Marwan',
+                      postContent: 'This is a post',
+                    ),
+                  ],
+                ),
               ),
-              Text(
-                context.read<HomeCubit>().counter.toString(),
-                style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            floatingActionButton: FloatingActionButton(
+              onPressed: () => showDialog(
+                context: context,
+                builder: (context) {
+                  return NewPostDialog();
+                },
               ),
-            ],
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: context.read<HomeCubit>().incrementCounter,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
-      );
-    });
+              backgroundColor: MarwanColors.primaryColor,
+              child: Icon(Icons.add),
+            ),
+          );
+        } else {
+          return Scaffold(
+            appBar: AppBar(
+              title: Text('Chat Zag'),
+            ),
+            body: Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children:[
+                  Text(
+                    'Welcome to Chat Zag',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ),
+            ),
+          );
+        }
+      },
+    );
   }
 }

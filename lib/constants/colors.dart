@@ -8,3 +8,9 @@ class ColorsManager {
   static const Color buttonColor = Color(0xFF7e64ff);
   static const Color textFieldColor = Color(0xFFccc2fe);
 }
+
+class MarwanColors{
+  static const Color primaryColor = Color(0xFF38D25E);
+  static const Color secondaryColor = Color(0xFFFFFFFF);
+  static const Color textColor = Color.fromARGB(255, 22, 22, 22);
+}
