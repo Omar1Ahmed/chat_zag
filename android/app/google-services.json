@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "76758480536",
+    "project_id": "zagsys-12608",
+    "storage_bucket": "zagsys-12608.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:76758480536:android:eb2267a775b191200002ed",
+        "android_client_info": {
+          "package_name": "com.example.chat_zag"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-1_Hfgsl3b9ALDXYXx0r8ceFKbGlE_ig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

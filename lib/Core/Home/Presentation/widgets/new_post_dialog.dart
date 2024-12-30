@@ -1,6 +1,6 @@
 import 'package:chat_zag/Responsive/ui_component/info_widget.dart';
 import 'package:chat_zag/constants/colors.dart';
-import 'package:chat_zag/constants/extantions.dart';
+
 import 'package:flutter/material.dart';
 
 class NewPostDialog extends StatelessWidget {
@@ -46,7 +46,7 @@ class NewPostDialog extends StatelessWidget {
                   'Cancel',
                   style: TextStyle(color: Colors.white),
                 ),
-                onPressed: () => context.pop()),
+                onPressed: () => Navigator.of(context).pop()),
             MaterialButton(
                 elevation: 0,
                 shape: RoundedRectangleBorder(

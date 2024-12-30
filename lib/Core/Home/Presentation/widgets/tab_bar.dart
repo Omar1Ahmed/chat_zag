@@ -31,7 +31,7 @@ class TabBarExample extends StatelessWidget {
           children: [
             ChatsPage(),
             MyHomePage(),
-            ProfilePage(),
+            ProfileScreen(),
           ],
         ),
       ),
